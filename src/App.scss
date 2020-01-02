@@ -71,6 +71,11 @@ a {
   font-size: 4rem;
 }
 
+main {
+  width: 75vw;
+  margin: 0 auto;
+}
+
 blockquote {
   font-size: 2rem;
   color: $clr-black;
@@ -85,7 +90,6 @@ blockquote {
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -134,10 +138,10 @@ blockquote {
 
 
 .card__img {
-  max-width: 100%;
-  display: block;
+  height: fit-content;
+  max-height: 120%;
+  display: inline-block;
   transition: opacity ease-out 250ms;
-
 }
 
 .card:hover {

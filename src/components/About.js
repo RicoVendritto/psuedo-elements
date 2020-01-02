@@ -2,7 +2,9 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div>About</div>
+    <main>
+      <blockquote>The greatest obstacle to discovery is not ignorance, but the illusion of knowledge. - Daniel Boorstin</blockquote>
+    </main>
   )
 }
 

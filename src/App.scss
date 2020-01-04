@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+@import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
 
-$ff-ss: 'Unica One';
-$ff-s: 'Vollkorn';
+$ff-ss: "Unica One";
+$ff-s: "Vollkorn";
 
 $clr-red: #c31;
 $clr-black: rgba(black, 1);
-$clr-gray: rgba(black, .7);
+$clr-gray: rgba(black, 0.7);
 
-*, *::before, *::after { box-sizing: border-box }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   font-size: 1rem;
@@ -17,21 +21,25 @@ body {
   color: $clr-gray;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: $ff-ss;
   text-transform: uppercase;
-  line-height: .9;
+  line-height: 0.9;
   color: #c31;
 }
 
-.intro { 
+.intro {
   position: relative;
   display: inline-block;
 }
 
 h1::before,
 h1::after {
-  content: '';
+  content: "";
   height: 100%;
   display: block;
   position: absolute;
@@ -49,8 +57,8 @@ h1::before {
 h1::after {
   height: 101%;
   background: white;
-  left: -.1em;
-  right: -.1em;
+  left: -0.1em;
+  right: -0.1em;
   z-index: -1;
 }
 
@@ -60,7 +68,7 @@ h2 {
 }
 
 p {
-  margin-top: .25em;
+  margin-top: 0.25em;
 }
 
 a {
@@ -79,11 +87,11 @@ main {
 blockquote {
   font-size: 2rem;
   color: $clr-black;
-  
+
   &::before {
     content: open-quote;
   }
-  
+
   &::after {
     content: close-quote;
   }
@@ -102,10 +110,10 @@ blockquote {
   width: 35vw;
   height: 40vh;
   overflow: hidden;
-  
+
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 1.25em;
     bottom: 1.25em;
@@ -114,28 +122,27 @@ blockquote {
     opacity: 1;
     transition: transform ease-out 250ms;
   }
-  
+
   &::before {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    transform: scale(0,1);
+    transform: scale(0, 1);
   }
-  
+
   &::after {
     border-left: 1px solid white;
     border-right: 1px solid white;
-    transform: scale(1,0);
+    transform: scale(1, 0);
   }
-  
+
   &:hover::before {
     transform: scale(1.05, 1);
   }
-  
+
   &:hover::after {
     transform: scale(1, 1.05);
   }
 }
-
 
 .card__img {
   height: fit-content;
@@ -146,7 +153,7 @@ blockquote {
 
 .card:hover {
   .card__img {
-    opacity: .4;
+    opacity: 0.4;
   }
 }
 
@@ -170,11 +177,48 @@ blockquote {
   margin-bottom: 0;
 }
 
-
-
 .source {
-  opacity: .8;
+  opacity: 0.8;
   position: absolute;
   width: 100%;
   bottom: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid lightseagreen;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0.5px 0.5px 0.5px black;
+  padding: 1em;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.inputfield {
+  border: 0.5px solid lightseagreen;
+  box-shadow: 0.5px 0.5px 0.5px black;
+  margin: 0.2em;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-weight: 900;
+
+  &.input1 {
+    caret-color: red;
+    color: red;
+  }
+  &.input2 {
+    caret-color: green;
+    color: green;
+  }
+  &.input3 {
+    caret-color: magenta;
+    color: magenta;
+  }
+  &.input4 {
+    caret-color: yellowgreen;
+    color: yellowgreen;
+  }
 }

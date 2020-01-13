@@ -207,7 +207,7 @@ form {
 
   &.input1 {
     caret-color: red;
-    color: red;
+    color: black;
   }
   &.input2 {
     caret-color: green;
@@ -220,5 +220,25 @@ form {
   &.input4 {
     caret-color: yellowgreen;
     color: yellowgreen;
+  }
+}
+
+.loremP {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+
+  &::first-letter {
+    font-size: 1.5em;
+    font-weight: 900;
+  }
+}
+
+.loremPline {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+
+  &::first-line {
+    font-size: 1.5em;
+    font-weight: 900;
   }
 }
